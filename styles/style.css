@@ -411,10 +411,17 @@
   font-family: Arial, Helvetica, sans-serif;
   color: #5b5b5b;
   padding: 10px;
-  background-color: #0000004e;
+  /* background-color: #0000004e; */
   text-align: center;
   border-radius: 4px;
-  box-shadow: -13px 10px 16px rgba(0, 0, 0, 0.78);
+  /* box-shadow: -13px 10px 16px rgba(0, 0, 0, 0.78); */
+  /* text-shadow: -10px 10px 3px black; */
+}
+
+.light-follow-text {
+  font-size: 3rem;
+  font-weight: bold;
+  transition: text-shadow 0.1s; /* Smooth transition */
 }
 
 .projects-container::-webkit-scrollbar {
