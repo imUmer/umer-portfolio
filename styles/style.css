@@ -421,7 +421,9 @@
 .light-follow-text {
   font-size: 3rem;
   font-weight: bold;
+  color: #000000;
   transition: text-shadow 0.1s; /* Smooth transition */
+  text-shadow: -10px 10px 3px black;
 }
 
 .projects-container::-webkit-scrollbar {
