@@ -846,8 +846,125 @@
   }
 }
 
+/* #mobile projects */
+/* Container for the section */
+.mobile-projects-container {
+  margin: 30px 5px;
+  align-items: stretch;
+  display: flex;
+  overflow-x: visible;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  gap: 20px;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  width: 100%;
+  box-sizing: border-box;
+}
 
+/* Individual project cards */
+.mobile-project-card {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 260px;
+  margin-left: 10px;
+  border-radius: 20px;
+  background-color: #000;
+  z-index: 1;
+  scroll-snap-align: start;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.78);
+}
 
+/* Card image container */
+.mobile-project-img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  height: 75%;
+}
+
+.mobile-project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card body for project details */
+.mobile-project-body {
+  padding: 10px 35px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 25%;
+  color: #fff;
+}
+
+.mobile-project-body h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mobile-project-body p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* Title at the top of the section */
+.mobile-project-category-top h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5b5b5b;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  text-shadow: -10px 10px 7px black;
+  z-index: -4;
+  transition: all 0.5s ease-out;
+}
+
+/* Vertical project title on the left */
+.mobile-project-category h1 {
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5b5b5b;
+  text-align: center;
+  border-radius: 4px;
+  text-shadow: -10px 10px 7px black;
+  transition: all 0.5s ease-out;
+  margin: 0px;
+}
+
+/* Scrollbar styling */
+.mobile-projects-container::-webkit-scrollbar {
+  height: 0px;
+}
+.mobile-projects-container::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
+.mobile-projects-container::-webkit-scrollbar-track {
+  background: #27000000;
+}
+
+.mobile-project-category-top h1 {
+  display: none; 
+}
+
+@media screen and (max-width: 800px) {
+  .mobile-project-category h1 {
+    display: none;
+  }
+
+  .mobile-project-category-top h1 {
+    display: flex;  
+  }
+}
 
 /* #contact contact container */
 .contact-container {
@@ -935,12 +1052,12 @@
   border: 1px solid #444;
   border-radius: 5px;
   background-color: #1a1a1a;
-  color: #f1ffff;
+  color: #40c372;
   font-size: 1rem;
   box-sizing: border-box;
 
   font-family: Arial, Helvetica, sans-serif;
-  color: #e2d9d9;
+  color: #40c372;
   border: none; /* Remove all borders */
   border: 1px solid #959595; /* Add a bottom border with the desired color */
   outline: none; /* Remove focus outline */
@@ -949,12 +1066,12 @@
 
 input:focus,
 textarea:focus {
-  border-bottom: 1px solid #218edc; /* Change bottom border color on focus */
+  border-bottom: 1px solid #40c372; /* Change bottom border color on focus */
 }
 
 .contact-container textarea {
   font-family: Arial, Helvetica, sans-serif;
-  color: #e2d9d9;
+  color: #40c372;
   border-radius: 4px;
 
 }
@@ -964,8 +1081,8 @@ textarea:focus {
 }
 
 .contact-container button {
-  background-color: #1d425d;
-  color: #fff;
+  background-color: #40c3728d;
+  color: #d3d3d3;
   cursor: pointer;
   padding: 10px 20px;
   border: 0.1px solid black;
@@ -974,7 +1091,9 @@ textarea:focus {
 }
 
 .contact-container button:hover {
-  background-color: #2b76ac;
+  background-color: #5cff9ada;
+  color: #ffffff;
+  text-shadow: -10px 10px 7px #272727;
 }
 
 /* Responsive design */
@@ -1039,6 +1158,10 @@ textarea:focus {
   text-shadow: -10px 10px 7px black;
 }
 
+.footer-column h4:hover  {
+  color: #40c372;
+  text-shadow: -10px 10px 7px #40c372;
+}
 
 .footer-column p,
 .footer-column ul,
@@ -1063,7 +1186,7 @@ textarea:focus {
 }
 
 .footer-column ul li a:hover {
-  color: #1a72b7;
+  color: #40c372;
 }
 
 .footer-bottom {
