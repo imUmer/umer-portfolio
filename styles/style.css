@@ -875,6 +875,7 @@
   z-index: 1;
   scroll-snap-align: start;
   box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.78);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 /* Card image container */
@@ -883,12 +884,23 @@
   border-top-right-radius: 20px;
   overflow: hidden;
   height: 75%;
+  transition: filter 0.3s ease;
 }
 
 .mobile-project-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+.mobile-project-card:hover .mobile-project-img {
+  filter: brightness(1.0); /* Brighten the top image */
+}
+
+/* Dim effect when not hovered */
+.mobile-project-img {
+  filter: brightness(0.8); /* Default dimmed state */
 }
 
 /* Card body for project details */
