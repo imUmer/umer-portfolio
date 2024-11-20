@@ -7,6 +7,11 @@
   color: rgb(235, 235, 235);
 }
 
+
+
+
+/* TOP header  */
+
 .top-header {
   display: flex;
   margin: 8vh;
@@ -24,6 +29,7 @@
   unicode-bidi: isolate;
 }
 
+
 .profile-img {
   background-color: #fff;
   border: 3px solid #71e9df;
@@ -31,6 +37,7 @@
   box-shadow: 3px 6px 10px #000;
   height: 175px;
   width: 175px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* header social media */
@@ -62,6 +69,126 @@
   justify-content: center;
   gap: 10px;
 }
+
+ 
+/* Profile Image */
+.profile-box {
+  text-align: center; /* Center-align for smaller screens */
+}
+
+/* Reduce size on smaller screens */
+@media (max-width: 768px) {
+  .profile-img {
+    height: 140px;
+    width: 140px;
+  }
+}
+
+/* Header Social Media */
+.profile-social {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 15px; /* Space between sections */
+}
+
+/* Profile Name */
+.name {
+  color: rgb(244, 227, 204);
+  font-size: 2rem;
+  margin: 0;
+}
+.age {
+  color: rgb(64, 195, 114);
+  font-size: 1rem;
+}
+
+/* Adjust name size for smaller screens */
+@media (max-width: 768px) {
+  .name {
+    font-size: 1.5rem;
+  }
+  .age {
+    font-size: 0.9rem;
+  }
+}
+
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between links */
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.9rem; /* Adjust font size for social links */
+}
+
+.links img {
+  width: 20px; /* Default icon size */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.links img:hover {
+  transform: scale(1.1); /* Slight hover effect */
+}
+
+/* Make icons smaller on very small screens */
+@media (max-width: 480px) {
+  .links img {
+    width: 15px;
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 800px) {
+  .top-header {
+    flex-direction: column; /* Stack profile and social vertically */
+    align-items: center; /* Center-align for smaller screens */
+    margin: 4vh 5%; /* Adjust margins */
+  }
+
+  .profile-social {
+    margin-left: 0; /* Remove left margin for centered alignment */
+    align-items: center; /* Center-align social section */
+  }
+
+  .social-media {
+    justify-content: center;
+    gap: 15px; /* Adjust gap for better spacing */
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .top-header {
+    margin: 2vh 2%; /* Reduce margins for small devices */
+  }
+
+  .profile-img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .age {
+    font-size: 0.8rem;
+  }
+
+  .links {
+    font-size: 0.8rem;
+  }
+}
+
+
+
 
 /* About  #about  */
 
@@ -668,5 +795,104 @@
 
   .input-row {
     flex-direction: column;
+  }
+}
+
+
+
+
+
+/* #footer Footer */
+
+/* Footer Styles */
+.footer {
+  color: #f1ffff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 25px;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.footer-column {
+  flex: 1 1 30%; /* Default 30% width for columns */
+  margin: 10px 0;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #1a72b7;
+}
+
+.footer-column p,
+.footer-column ul,
+.footer-column li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #f1ffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #1a72b7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .footer-column {
+    flex: 1 1 100%; /* Full width for columns */
+    text-align: center;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 5px; /* Reduce spacing for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column h4 {
+    font-size: 1rem; /* Adjust heading size */
+  }
+
+  .footer-column p,
+  .footer-column ul,
+  .footer-column li {
+    font-size: 0.8rem; /* Reduce font size for mobile */
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem; /* Adjust footer text size */
   }
 }
