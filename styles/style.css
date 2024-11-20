@@ -77,7 +77,7 @@
 }
 
 /* Reduce size on smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .profile-img {
     height: 140px;
     width: 140px;
@@ -104,7 +104,7 @@
 }
 
 /* Adjust name size for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .name {
     font-size: 1.5rem;
   }
@@ -236,7 +236,7 @@
   text-align: center;
   align-items: center;
   padding-bottom: 10px;
-  
+  transition: all 0.3s ease-in-out;
 }
 .blackbox p {
   background-color: #343842;
@@ -245,7 +245,7 @@
   color: #fff; 
 }
 
-@media (max-width: 788px) {
+@media (max-width: 800px) {
   .about {
     flex-direction: column-reverse; /* Stack sections vertically */
     margin: 3vh; /* Adjust outer margins */
@@ -318,6 +318,19 @@
   text-shadow: -10px 10px 7px black;
 }
 
+.skill-category-top h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5b5b5b;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  text-shadow: -10px 10px 7px black;
+  z-index: -4;
+}
 
 /* Skills  */
 
@@ -516,6 +529,22 @@
   border: 5px solid #e6983a;
 }
 
+.skill-category-top h1 {
+  display: none; 
+}
+
+@media screen and (max-width: 800px) {
+  .skill-category h1 {
+    display: none;
+  }
+
+  .skill-category-top h1 {
+    display: flex;  
+  }
+}
+
+
+
 /* Projects #proj */
 
 .projects-container {
@@ -563,7 +592,19 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   height: 25%;
+  
 }
+.project-body p {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.project-body h3 {
+  /* display: block; */
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
 
 /* Style for the main title */
 .project-title {
@@ -588,6 +629,20 @@
   border-radius: 4px;
   /* box-shadow: -13px 10px 16px rgba(0, 0, 0, 0.78); */
   text-shadow: -10px 10px 7px black;
+}
+
+.project-category-top h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5b5b5b;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  text-shadow: -10px 10px 7px black;
+  z-index: -4;
 }
 
 .light-follow-text {
@@ -666,6 +721,21 @@
   border-radius: 4px;
   /* box-shadow: -13px 10px 16px rgba(0, 0, 0, 0.78); */
   text-shadow: -10px 20px 6px rgb(221, 211, 211);
+}
+
+
+.project-category-top h1 {
+  display: none; 
+}
+
+@media screen and (max-width: 800px) {
+  .project-category h1 {
+    display: none;
+  }
+
+  .project-category-top h1 {
+    display: flex;  
+  }
 }
 
 
@@ -748,7 +818,7 @@
 .contact-container button {
   width: calc(100% - 10px); /* Account for padding and maintain equal spacing */
   padding: 10px;
-  margin-bottom: 15px;
+  margin: 15px;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #444;
@@ -756,9 +826,27 @@
   background-color: #1a1a1a;
   color: #f1ffff;
   font-size: 1rem;
-  box-sizing: border-box; /* Consistent sizing */
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e2d9d9;
+  border: none; /* Remove all borders */
+  border: 1px solid #959595; /* Add a bottom border with the desired color */
+  outline: none; /* Remove focus outline */
+
 }
 
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid #218edc; /* Change bottom border color on focus */
+}
+
+.contact-container textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e2d9d9;
+  border-radius: 4px;
+
+}
 .contact-container textarea {
   height: 100px;
   resize: none;
@@ -779,7 +867,7 @@
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .contact-container {
     flex-direction: column;
     text-align: center;
@@ -824,11 +912,21 @@
   margin: 10px 0;
 }
 
-.footer-column h4 {
+.footer-column h4  {
+  font-size: larger;
+  margin-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #777777;
+  text-align: center;
+  border-radius: 4px;
+  text-shadow: -10px 10px 7px black;
+}
+
+/* .footer-column h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #1a72b7;
-}
+} */
 
 .footer-column p,
 .footer-column ul,
@@ -866,14 +964,20 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  .footer {
+    margin: 10px 30px ;
+  }
   .footer-container {
     flex-direction: column; /* Stack columns vertically */
+    gap: 20px;
   }
 
   .footer-column {
     flex: 1 1 100%; /* Full width for columns */
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-column ul li {
