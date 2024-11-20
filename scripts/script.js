@@ -41,3 +41,28 @@ const text = document.querySelector('.light-follow-text');
 
   // Start animation
   animateShadow();
+
+  // Select the arrow and the skills section
+const arrow = document.getElementById('arrow');
+const skillsSection = document.getElementById('skills');
+
+// Intersection Observer for detecting the skills section
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add animation class when skills section is in view
+        arrow.classList.add('animate');
+      } else {
+        // Remove animation class when scrolling away
+        arrow.classList.remove('animate');
+      }
+    });
+  },
+  {
+    threshold: 0.5, // Trigger when 50% of the section is visible
+  }
+);
+
+// Observe the skills section
+observer.observe(skillsSection);
