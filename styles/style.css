@@ -31,7 +31,8 @@
 
 .profile-img {
   background-color: #fff;
-  border: 3px solid #71e9df;
+  /* border: 3px solid #71e9df; */
+  border: 3px solid #40c372;
   border-radius: 30px;
   box-shadow: 3px 6px 10px #000;
   height: 175px; /* Fixed height */
@@ -49,10 +50,10 @@
 /* profile name */
 
 .name {
-  color: rgb(244, 227, 204);
+  color: #f4e3cc;
 }
 .age {
-  color: rgb(64, 195, 114);
+  color: #40c372;
   font-size: medium;
 }
 
@@ -599,10 +600,8 @@
 
 /* Individual sections */
 .communication-section {
-  background-color: #1e1e1e; /* Section background */
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Headings and Subheadings */
@@ -981,10 +980,16 @@ textarea:focus {
 /* Responsive design */
 @media (max-width: 800px) {
   .contact-container {
+    display: inline;
     flex-direction: column;
-    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px 10px;
   }
 
+.contact-body {
+  margin: 10px 20px;
+}
   .contact-title {
     position: static;
     transform: none;
@@ -1034,11 +1039,6 @@ textarea:focus {
   text-shadow: -10px 10px 7px black;
 }
 
-/* .footer-column h4 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #1a72b7;
-} */
 
 .footer-column p,
 .footer-column ul,
