@@ -35,11 +35,11 @@
   border: 3px solid #71e9df;
   border-radius: 30px;
   box-shadow: 3px 6px 10px #000;
-  height: 175px;
-  width: 175px;
+  height: 175px; /* Fixed height */
+  width: 175px;  /* Fixed width */
+  object-fit: cover; /* Ensures image doesn't stretch and fills the container */
   transition: all 0.3s ease-in-out;
 }
-
 /* header social media */
 .profile-social {
   display: flex;
