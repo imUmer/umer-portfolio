@@ -66,3 +66,4 @@ const observer = new IntersectionObserver(
 
 // Observe the skills section
 observer.observe(skillsSection);
+

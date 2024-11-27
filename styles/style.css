@@ -1246,4 +1246,8 @@ textarea:focus {
   .footer-bottom {
     font-size: 0.7rem; /* Adjust footer text size */
   }
+
+  h4 {
+    font-size: smaller;
+  }
 }
