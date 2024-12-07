@@ -686,7 +686,9 @@
   width: 100%;
   box-sizing: border-box;
 }
-
+.projects-container a {
+   text-decoration: none;
+}
 .project-card {
   display: flex;
   flex-direction: column;
