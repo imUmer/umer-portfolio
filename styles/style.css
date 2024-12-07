@@ -869,8 +869,8 @@
 .mobile-project-card {
   display: flex;
   flex-direction: column;
-  width: 260px;
-  height: 360px;
+  width: 230px;
+  height: 310px;
   margin-left: 10px;
   border-radius: 20px;
   background-color: #000;
@@ -885,7 +885,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
-  height: 75%;
+  height: 80%;
   transition: filter 0.3s ease;
 }
 
@@ -910,7 +910,7 @@
   padding: 10px 35px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  height: 25%;
+  height: 20%;
   color: #fff;
 }
 
